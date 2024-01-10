@@ -1,10 +1,10 @@
 Olá pessoal 👋
 
-😁 Me chamo Kauan, mas podem me chamar de Haru
+😁 Me chamo Kauan
 
-🔭 atualmente trabalho como Desenvolvedor de Software
+🔭 atualmente trabalho como Desenvolvedor de Software na Softplan
 
-🌱 estou cursando Desenvolvimento de Sistemas
+🌱 estou cursando Ciência da Computação
 
 <br>
 
