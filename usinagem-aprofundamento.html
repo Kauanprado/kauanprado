@@ -95,8 +95,39 @@
         }
 
         .conteudo p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: justify;
+        }
+        
+        .conteudo p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .conteudo p:has(+ p:first-of-type) {
+            margin-bottom: 20px;
+        }
+        
+        /* Estilo para listas de parâmetros */
+        .conteudo p + p:has(em) {
+            margin-bottom: 12px;
+        }
+        
+        /* Melhor renderização de quebras de linha */
+        br + br {
+            content: "";
+            display: block;
+            margin: 4px 0;
+        }
+        
+        /* Estilos para blocos inline */
+        div[style*="background-color"] {
+            line-height: 1.8;
+        }
+        
+        div[style*="background-color"] br {
+            content: "";
+            display: block;
+            margin: 8px 0;
         }
 
         .card {
@@ -125,6 +156,12 @@
             color: #555;
             line-height: 1.8;
         }
+        
+        .card-conteudo br {
+            content: "";
+            display: block;
+            margin: 8px 0;
+        }
 
         .dica-box {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -145,6 +182,12 @@
             color: white;
             font-size: 1.05rem;
             line-height: 1.8;
+        }
+        
+        .dica-conteudo br {
+            content: "";
+            display: block;
+            margin: 8px 0;
         }
 
         .table-responsive {
@@ -229,6 +272,10 @@
             line-height: 1.8;
             margin-top: 15px;
         }
+        
+        .armadilha-exemplos p {
+            margin-bottom: 0;
+        }
 
         .estrategia-pratica {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -260,6 +307,12 @@
 
         .estrategia-exemplo-texto {
             line-height: 1.9;
+        }
+        
+        .estrategia-exemplo-texto br {
+            content: "";
+            display: block;
+            margin: 8px 0;
         }
 
         .checklist-container {
@@ -399,6 +452,12 @@
             line-height: 1.9;
             font-size: 1.05rem;
         }
+        
+        .resposta-explicacao br {
+            content: "";
+            display: block;
+            margin: 8px 0;
+        }
 
         @media (max-width: 768px) {
             .titulo-principal h1 {
@@ -439,7 +498,9 @@
             <div class="conteudo">
                 <p>🤔 <strong><em>Como um simples pedaço de metal duro consegue esculpir aço como se fosse manteiga, criando peças com precisão micrométrica?</em></strong></p>
 
-                <p>Esta capacidade fascinante reside na essência da usinagem, um conjunto de processos de fabricação que conforma peças através da remoção controlada de material, na forma de cavaco.<br/><br/>Trata-se de uma tecnologia fundamental na indústria metalmecânica, responsável pela produção de componentes para motores, aeronaves, moldes e inúmeros outros produtos que exigem alta <strong>precisão dimensional</strong> e qualidade de acabamento.</p>
+                <p>Esta capacidade fascinante reside na essência da usinagem, um conjunto de processos de fabricação que conforma peças através da remoção controlada de material, na forma de cavaco.</p>
+                
+                <p>Trata-se de uma tecnologia fundamental na indústria metalmecânica, responsável pela produção de componentes para motores, aeronaves, moldes e inúmeros outros produtos que exigem alta <strong>precisão dimensional</strong> e qualidade de acabamento.</p>
 
                 <p>Para dominar este universo, é crucial compreender seus quatro pilares interconectados: a geometria da ferramenta, as forças envolvidas no corte, as propriedades dos materiais e, integrando tudo, a análise econômica.</p>
 
@@ -476,7 +537,11 @@
                     $$v_c \cdot T^n = C$$
                 </div>
 
-                <p>Onde:<br/><br/>🔹 <em>\(v_c\)</em> é a velocidade de corte (em m/min).<br/><br/>🔹 <em>\(T\)</em> é a vida da ferramenta (em min).<br/><br/>🔹 <em>\(n\)</em> é o expoente de vida da ferramenta, que depende do material da ferramenta e da peça.<br/><br/>🔹 <em>\(C\)</em> é a constante de Taylor, que representa a velocidade de corte que resultaria em uma vida de 1 minuto.</p>
+                <p>Onde:</p>
+                <p>🔹 <em>\(v_c\)</em> é a velocidade de corte (em m/min).</p>
+                <p>🔹 <em>\(T\)</em> é a vida da ferramenta (em min).</p>
+                <p>🔹 <em>\(n\)</em> é o expoente de vida da ferramenta, que depende do material da ferramenta e da peça.</p>
+                <p>🔹 <em>\(C\)</em> é a constante de Taylor, que representa a velocidade de corte que resultaria em uma vida de 1 minuto.</p>
 
                 <div class="table-responsive">
                     <div class="tabela-titulo">Comparativo de Materiais de Ferramenta de Corte</div>
